@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Знакомства в Telegram</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+            rel="stylesheet">
+        <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      scroll-behavior: smooth;
+    }
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeIn 1s ease-out forwards;
+    }
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+    </head>
+    <body
+        class="text-white min-h-screen flex flex-col items-center text-center px-4">
+
+        <!-- Языковое меню -->
+        <div class="absolute top-4 right-4">
+            <select id="languageSelect"
+                class="bg-white text-black rounded px-2 py-1">
+                <option value="ru">🇷🇺 Русский</option>
+                <option value="en">🇬🇧 English</option>
+                <option value="ua">🇺🇦 Українська</option>
+                <option value="pl">🇵🇱 Polski</option>
+                <option value="fr">🇫🇷 Français</option>
+                <option value="es">🇪🇸 Español</option>
+            </select>
+        </div>
+
+        <header class="mt-10">
+            <img src="logo.jpg" alt="Logo"
+                class="w-80 h-80 rounded-xl mx-auto shadow-lg border-4 border-white" />
+        </header>
+
+        <main
+            class="flex flex-col justify-center items-center mt-6 min-h-[80vh]">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4 animate-pulse"
+                data-i18n-key="title">
+                Добро пожаловать в мир знакомств
+            </h1>
+
+            <p class="text-lg md:text-xl mb-8 max-w-xl"
+                data-i18n-key="description">
+                Найди интересных людей рядом и начни общаться прямо сейчас с
+                помощью нашего Telegram бота.
+            </p>
+
+            <div class="flex flex-col sm:flex-row gap-4 mb-6">
+                <a href="https://t.me/michalangelo_bot?start=Oj0wd"
+                    target="_blank"
+                    class="bg-pink-500 hover:bg-pink-600 transition px-6 py-3 rounded-full text-lg font-semibold shadow-lg"
+                    data-i18n-key="start">
+                    🚀 Начать знакомство
+                </a>
+                <a href="https://github.com/devvsima/dating-bot"
+                    target="_blank"
+                    class="bg-white text-gray-800 hover:bg-gray-200 transition px-6 py-3 rounded-full text-lg font-semibold shadow-lg"
+                    data-i18n-key="github">
+                    💻 GitHub проекта
+                </a>
+            </div>
+
+            <a href="https://t.me/devvsima" target="_blank"
+                class="underline text-sm opacity-80 hover:opacity-100 transition mt-2"
+                data-i18n-key="contact">
+                📬 Связаться со мной
+            </a>
+
+            <a href="#features"
+                class="animate-bounce text-3xl mt-12 opacity-80">⬇️</a>
+        </main>
+
+        <section id="features"
+            class="w-full max-w-4xl bg-white/10 p-8 rounded-3xl backdrop-blur-lg mt-32 mb-24 fade-in">
+            <h2 class="text-3xl font-bold mb-6" data-i18n-key="benefits">🌟
+                Преимущества нашего бота</h2>
+            <ul class="space-y-4 text-left text-lg">
+                <li data-i18n-key="feature_multilang">🌐 Многоязычность: 🇬🇧
+                    🇷🇺 🇺🇦 🇵🇱 🇫🇷 🇪🇸</li>
+                <li data-i18n-key="feature_match">🤖 Умный подбор партнёров по
+                    интересам и расстоянию</li>
+                <li data-i18n-key="feature_anon">🔒 Полная анонимность и
+                    безопасность</li>
+                <li data-i18n-key="feature_location">📍 Поиск по городу или
+                    ближайшим регионам</li>
+                <li data-i18n-key="feature_updates">📅 Регулярные обновления и
+                    поддержка</li>
+                <li data-i18n-key="feature_likes">❤️ Лайки и взаимные
+                    симпатии</li>
+            </ul>
+        </section>
+
+        <footer class="text-sm opacity-70 pb-8" data-i18n-key="footer">
+            &copy; 2025 Твой бот знакомств в Telegram
+        </footer>
+
+        <!-- Скрипт перевода -->
+        <script>
+    const translations = {
+      en: {
+        title: "Welcome to the world of dating",
+        description: "Find interesting people nearby and start chatting now with our Telegram bot.",
+        start: "🚀 Start Dating",
+        github: "💻 GitHub Project",
+        contact: "📬 Contact me",
+        benefits: "🌟 Our Bot's Features",
+        feature_multilang: "🌐 Multilingual: 🇬🇧 🇷🇺 🇺🇦 🇵🇱 🇫🇷 🇪🇸",
+        feature_match: "🤖 Smart matching by interests and location",
+        feature_anon: "🔒 Full anonymity and safety",
+        feature_location: "📍 Search by city or nearby regions",
+        feature_updates: "📅 Regular updates and support",
+        feature_likes: "❤️ Likes and mutual matches",
+        footer: "&copy; 2025 Your Telegram Dating Bot"
+      },
+      ru: { /* Повтор ru-ключей (оставим как по умолчанию) */ },
+      ua: {
+        title: "Ласкаво просимо у світ знайомств",
+        description: "Знаходь цікавих людей поруч і почни спілкування прямо зараз через наш Telegram бот.",
+        start: "🚀 Почати знайомства",
+        github: "💻 GitHub проєкту",
+        contact: "📬 Зв’язатися зі мною",
+        benefits: "🌟 Переваги нашого бота",
+        feature_multilang: "🌐 Багатомовність: 🇬🇧 🇷🇺 🇺🇦 🇵🇱 🇫🇷 🇪🇸",
+        feature_match: "🤖 Розумний підбір за інтересами та локацією",
+        feature_anon: "🔒 Повна анонімність та безпека",
+        feature_location: "📍 Пошук за містом або регіоном",
+        feature_updates: "📅 Регулярні оновлення та підтримка",
+        feature_likes: "❤️ Вподобайки та взаємні симпатії",
+        footer: "&copy; 2025 Твій бот знайомств у Telegram"
+      },
+      pl: {
+        title: "Witamy w świecie randek",
+        description: "Znajdź ciekawych ludzi w pobliżu i zacznij rozmawiać dzięki naszemu botowi na Telegramie.",
+        start: "🚀 Zacznij randkowanie",
+        github: "💻 Projekt na GitHub",
+        contact: "📬 Skontaktuj się ze mną",
+        benefits: "🌟 Zalety naszego bota",
+        feature_multilang: "🌐 Wielojęzyczność: 🇬🇧 🇷🇺 🇺🇦 🇵🇱 🇫🇷 🇪🇸",
+        feature_match: "🤖 Inteligentne dopasowanie według zainteresowań i lokalizacji",
+        feature_anon: "🔒 Pełna anonimowość i bezpieczeństwo",
+        feature_location: "📍 Wyszukiwanie po mieście i okolicach",
+        feature_updates: "📅 Regularne aktualizacje i wsparcie",
+        feature_likes: "❤️ Polubienia i wzajemne dopasowania",
+        footer: "&copy; 2025 Twój bot randkowy w Telegramie"
+      },
+      fr: {
+        title: "Bienvenue dans le monde des rencontres",
+        description: "Trouvez des personnes intéressantes près de chez vous et commencez à discuter avec notre bot Telegram.",
+        start: "🚀 Commencer à rencontrer",
+        github: "💻 Projet GitHub",
+        contact: "📬 Me contacter",
+        benefits: "🌟 Avantages de notre bot",
+        feature_multilang: "🌐 Multilingue: 🇬🇧 🇷🇺 🇺🇦 🇵🇱 🇫🇷 🇪🇸",
+        feature_match: "🤖 Correspondance intelligente par intérêts et localisation",
+        feature_anon: "🔒 Anonymat et sécurité complets",
+        feature_location: "📍 Recherche par ville ou région",
+        feature_updates: "📅 Mises à jour régulières et support",
+        feature_likes: "❤️ J'aime et affinités réciproques",
+        footer: "&copy; 2025 Votre bot de rencontre Telegram"
+      },
+      es: {
+        title: "Bienvenido al mundo de las citas",
+        description: "Encuentra personas interesantes cerca de ti y empieza a chatear ahora con nuestro bot de Telegram.",
+        start: "🚀 Empezar a conocer gente",
+        github: "💻 Proyecto en GitHub",
+        contact: "📬 Contáctame",
+        benefits: "🌟 Beneficios de nuestro bot",
+        feature_multilang: "🌐 Multilingüe: 🇬🇧 🇷🇺 🇺🇦 🇵🇱 🇫🇷 🇪🇸",
+        feature_match: "🤖 Emparejamiento inteligente por intereses y ubicación",
+        feature_anon: "🔒 Total anonimato y seguridad",
+        feature_location: "📍 Búsqueda por ciudad o región cercana",
+        feature_updates: "📅 Actualizaciones regulares y soporte",
+        feature_likes: "❤️ Me gusta y coincidencias",
+        footer: "&copy; 2025 Tu bot de citas en Telegram"
+      }
+    };
+
+    const langSelect = document.getElementById('languageSelect');
+    langSelect.addEventListener('change', () => {
+      const lang = langSelect.value;
+      document.querySelectorAll('[data-i18n-key]').forEach(el => {
+        const key = el.getAttribute('data-i18n-key');
+        el.innerHTML = translations[lang]?.[key] || el.innerHTML;
+      });
+    });
+  </script>
+    </body>
+</html>
