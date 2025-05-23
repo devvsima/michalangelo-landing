@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="ru">
-    <head>
-        <meta charset="UTF-8" />
-        <title>Знакомства в Telegram</title>
-        <script src="https://cdn.tailwindcss.com"></script>
-        <link
-            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
-            rel="stylesheet">
-        <style>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Знакомства в Telegram</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet">
+    <style>
     body {
       font-family: 'Montserrat', sans-serif;
       background: linear-gradient(135deg, #667eea, #764ba2);
@@ -25,92 +26,92 @@
       }
     }
   </style>
-    </head>
-    <body
-        class="text-white min-h-screen flex flex-col items-center text-center px-4">
+  </head>
+  <body
+    class="text-white min-h-screen flex flex-col items-center text-center px-4">
 
-        <!-- Языковое меню -->
-        <div class="absolute top-4 right-4">
-            <select id="languageSelect"
-                class="bg-white text-black rounded px-2 py-1">
-                <option value="ru">🇷🇺 Русский</option>
-                <option value="en">🇬🇧 English</option>
-                <option value="ua">🇺🇦 Українська</option>
-                <option value="pl">🇵🇱 Polski</option>
-                <option value="fr">🇫🇷 Français</option>
-                <option value="es">🇪🇸 Español</option>
-            </select>
-        </div>
+    <!-- Языковое меню -->
+    <div class="absolute top-4 right-4">
+      <select id="languageSelect"
+        class="bg-white text-black rounded px-2 py-1">
+        <option value="ru">🇷🇺 Русский</option>
+        <option value="en" selected>🇬🇧 English</option>
+        <option value="ua">🇺🇦 Українська</option>
+        <option value="pl">🇵🇱 Polski</option>
+        <option value="fr">🇫🇷 Français</option>
+        <option value="es">🇪🇸 Español</option>
+      </select>
+    </div>
 
-        <header class="mt-10">
-            <img src="logo.jpg" alt="Logo"
-                class="w-80 h-80 rounded-xl mx-auto shadow-lg border-4 border-white" />
-        </header>
+    <header class="mt-10">
+      <img src="logo.jpg" alt="Logo"
+        class="w-80 h-80 rounded-xl mx-auto shadow-lg border-4 border-white" />
+    </header>
 
-        <main
-            class="flex flex-col justify-center items-center mt-6 min-h-[80vh]">
-            <h1 class="text-4xl md:text-5xl font-bold mb-4 animate-pulse"
-                data-i18n-key="title">
-                Добро пожаловать в мир знакомств
-            </h1>
+    <main
+      class="flex flex-col justify-center items-center mt-6 min-h-[80vh]">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4 animate-pulse"
+        data-i18n-key="title">
+        Добро пожаловать в мир знакомств
+      </h1>
 
-            <p class="text-lg md:text-xl mb-8 max-w-xl"
-                data-i18n-key="description">
-                Найди интересных людей рядом и начни общаться прямо сейчас с
-                помощью нашего Telegram бота.
-            </p>
+      <p class="text-lg md:text-xl mb-8 max-w-xl"
+        data-i18n-key="description">
+        Найди интересных людей рядом и начни общаться прямо сейчас с
+        помощью нашего Telegram бота.
+      </p>
 
-            <div class="flex flex-col sm:flex-row gap-4 mb-6">
-                <a href="https://t.me/michalangelo_bot?start=Oj0wd"
-                    target="_blank"
-                    class="bg-pink-500 hover:bg-pink-600 transition px-6 py-3 rounded-full text-lg font-semibold shadow-lg"
-                    data-i18n-key="start">
-                    🚀 Начать знакомство
-                </a>
-                <a href="https://github.com/devvsima/dating-bot"
-                    target="_blank"
-                    class="bg-white text-gray-800 hover:bg-gray-200 transition px-6 py-3 rounded-full text-lg font-semibold shadow-lg"
-                    data-i18n-key="github">
-                    💻 GitHub проекта
-                </a>
-            </div>
+      <div class="flex flex-col sm:flex-row gap-4 mb-6">
+        <a href="https://t.me/michalangelo_bot?start=Oj0wd  "
+          target="_blank"
+          class="bg-pink-500 hover:bg-pink-600 transition px-6 py-3 rounded-full text-lg font-semibold shadow-lg"
+          data-i18n-key="start">
+          🚀 Начать знакомство
+        </a>
+        <a href="https://github.com/devvsima/dating-bot"
+          target="_blank"
+          class="bg-white text-gray-800 hover:bg-gray-200 transition px-6 py-3 rounded-full text-lg font-semibold shadow-lg"
+          data-i18n-key="github">
+          💻 GitHub проекта
+        </a>
+      </div>
 
-            <a href="https://t.me/devvsima" target="_blank"
-                class="underline text-sm opacity-80 hover:opacity-100 transition mt-2"
-                data-i18n-key="contact">
-                📬 Связаться со мной
-            </a>
+      <a href="https://t.me/devvsima" target="_blank"
+        class="underline text-sm opacity-80 hover:opacity-100 transition mt-2"
+        data-i18n-key="contact">
+        📬 Связаться со мной
+      </a>
 
-            <a href="#features"
-                class="animate-bounce text-3xl mt-12 opacity-80">⬇️</a>
-        </main>
+      <a href="#features"
+        class="animate-bounce text-3xl mt-12 opacity-80">⬇️</a>
+    </main>
 
-        <section id="features"
-            class="w-full max-w-4xl bg-white/10 p-8 rounded-3xl backdrop-blur-lg mt-32 mb-24 fade-in">
-            <h2 class="text-3xl font-bold mb-6" data-i18n-key="benefits">🌟
-                Преимущества нашего бота</h2>
-            <ul class="space-y-4 text-left text-lg">
-                <li data-i18n-key="feature_multilang">🌐 Многоязычность: 🇬🇧
-                    🇷🇺 🇺🇦 🇵🇱 🇫🇷 🇪🇸</li>
-                <li data-i18n-key="feature_match">🤖 Умный подбор партнёров по
-                    интересам и расстоянию</li>
-                <li data-i18n-key="feature_anon">🔒 Полная анонимность и
-                    безопасность</li>
-                <li data-i18n-key="feature_location">📍 Поиск по городу или
-                    ближайшим регионам</li>
-                <li data-i18n-key="feature_updates">📅 Регулярные обновления и
-                    поддержка</li>
-                <li data-i18n-key="feature_likes">❤️ Лайки и взаимные
-                    симпатии</li>
-            </ul>
-        </section>
+    <section id="features"
+      class="w-full max-w-4xl bg-white/10 p-8 rounded-3xl backdrop-blur-lg mt-32 mb-24 fade-in">
+      <h2 class="text-3xl font-bold mb-6" data-i18n-key="benefits">🌟
+        Преимущества нашего бота</h2>
+      <ul class="space-y-4 text-left text-lg">
+        <li data-i18n-key="feature_multilang">🌐 Многоязычность: 🇬🇧
+          🇷🇺 🇺🇦 🇵🇱 🇫🇷 🇪🇸</li>
+        <li data-i18n-key="feature_match">🤖 Умный подбор партнёров по
+          интересам и расстоянию</li>
+        <li data-i18n-key="feature_anon">🔒 Полная анонимность и
+          безопасность</li>
+        <li data-i18n-key="feature_location">📍 Поиск по городу или
+          ближайшим регионам</li>
+        <li data-i18n-key="feature_updates">📅 Регулярные обновления и
+          поддержка</li>
+        <li data-i18n-key="feature_likes">❤️ Лайки и взаимные
+          симпатии</li>
+      </ul>
+    </section>
 
-        <footer class="text-sm opacity-70 pb-8" data-i18n-key="footer">
-            &copy; 2025 Твой бот знакомств в Telegram
-        </footer>
+    <footer class="text-sm opacity-70 pb-8" data-i18n-key="footer">
+      &copy; 2025 Твой бот знакомств в Telegram
+    </footer>
 
-        <!-- Скрипт перевода -->
-        <script>
+    <!-- Скрипт перевода -->
+    <script>
     const translations = {
       en: {
         title: "Welcome to the world of dating",
@@ -198,6 +199,11 @@
         el.innerHTML = translations[lang]?.[key] || el.innerHTML;
       });
     });
+
+    window.addEventListener('DOMContentLoaded', () => {
+     langSelect.value = 'en';
+     langSelect.dispatchEvent(new Event('change'));
+   });
   </script>
-    </body>
+  </body>
 </html>
